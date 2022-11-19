@@ -1,0 +1,24 @@
+var TelegramBot = require('node-telegram-bot-api');
+
+var token = '5612847573:AAGK6nxQKd9zoUF36YIxvrfy1Zv_ab8ZsIM';
+
+var bot = new TelegramBot(token, {polling: true});
+
+bot.on('message', function(madam){
+   console.log(madam.text);
+    if (madam.text == "hi friend") {
+    bot.sendMessage(madam.chat.id,"hi sir");
+    }  else{
+    if (madam.text == "emchestunnav") {
+    bot.sendMessage(madam.chat.id,"kaali friend");
+    }
+
+    else {
+             if(madam.text == "ok then")
+       {
+           bot.sendMessage(madam.chat.id,"ok take care"); 
+        }else{
+            bot.sendMessage(madam.chat.id,"not understood");
+        }
+        
+    }}});
